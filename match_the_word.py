@@ -3,7 +3,7 @@ import random
 
 if __name__ == '__main__':
     print('Enter the english word for given tamil word', )
-    tamil = ['Amma', 'Appa', 'Maphalam', 'Elumichai', 'Vangayam', 'Thakkali']
+    tamil = ['Amma', 'Appa', 'Mampalam', 'Elumichai', 'Vangayam', 'Thakkali']
     english = ['Mom', 'Dad', 'Mango', 'Lemon', 'Onion', 'Tomato']
     n = 0
     while True:
