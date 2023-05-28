@@ -8,8 +8,6 @@ if __name__ == '__main__':
     scripts_dir = os.path.dirname(__file__)
     data_path = scripts_dir + '/../data/tamil_english.csv'
     data = read_csv(data_path, sep='|', header=0)
-    print(data)
-
     n = 0
     while True:
         i = random.randrange(0, len(data))
