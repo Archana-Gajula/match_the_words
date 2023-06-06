@@ -6,7 +6,7 @@ from pandas import read_csv
 if __name__ == '__main__':
     print('Enter the english word for given tamil word', )
     scripts_dir = os.path.dirname(__file__)
-    data_path = scripts_dir + '/../data/tamil_english.csv'
+    data_path = scripts_dir + '/../data/tamil_english_words.csv'
     data = read_csv(data_path, sep='|', header=0)
     n = 0
     while True:
