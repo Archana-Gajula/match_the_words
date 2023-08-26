@@ -4,9 +4,9 @@ import os
 from pandas import read_csv
 
 
-def generate_unique_random(array, len_of_data):
+def generate_unique_random(array, length):
     while True:
-        random_value = random.randrange(0, len_of_data)  # Adjust the range as needed
+        random_value = random.randrange(0, length)  
         if random_value not in array:
             return random_value
 
@@ -35,4 +35,9 @@ if __name__ == '__main__':
                     n += 1
             used_words_index.append(i)
             if len(used_words_index) == len_of_data:
-                exit('Well Done! You have answered all the words.')
+                print('\nWell Done \U0001f44f! You have answered all the words.')
+                response = input('Do you want to Play again? [y/n]')
+                if response.lower() == 'y':
+                    used_words_index = []
+                else:
+                    exit('See you soon \U0001f600')
