@@ -9,6 +9,8 @@ def generate_unique_random(array, len_of_data):
         random_value = random.randrange(0, len_of_data)  # Adjust the range as needed
         if random_value not in array:
             return random_value
+        elif len(array) == len_of_data:
+            exit('Well Done! You have answered all the words.')
 
 
 if __name__ == '__main__':
