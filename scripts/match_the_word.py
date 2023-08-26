@@ -9,8 +9,6 @@ def generate_unique_random(array, len_of_data):
         random_value = random.randrange(0, len_of_data)  # Adjust the range as needed
         if random_value not in array:
             return random_value
-        elif len(array) == len_of_data:
-            exit('Well Done! You have answered all the words.')
 
 
 if __name__ == '__main__':
@@ -18,11 +16,12 @@ if __name__ == '__main__':
     scripts_dir = os.path.dirname(__file__)
     data_path = scripts_dir + '/../data/tamil_english_words.csv'
     data = read_csv(data_path, sep='|', header=0)
+    len_of_data = len(data)
     n = 0
     while True:
         used_words_index = []
         while True:
-            i = generate_unique_random(used_words_index, len(data))
+            i = generate_unique_random(used_words_index, len_of_data)
             print('---> ', data.at[i, 'Tamil'])
             right_ans = False
             for n in range(3):
@@ -35,3 +34,5 @@ if __name__ == '__main__':
                     print('Sorry! The correct answer is ', data.at[i, 'English'])
                     n += 1
             used_words_index.append(i)
+            if len(used_words_index) == len_of_data:
+                exit('Well Done! You have answered all the words.')
