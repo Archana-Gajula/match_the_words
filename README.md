@@ -1,5 +1,5 @@
 ## Match the words
-This is a small game to improve your Tamil vocabulary through English.
+This is a small game to improve your Tamil vocabulary through English (Any language for that matter) .
 
 From the pre-defined set of words a random Tamil word will be given, and you need to enter the correct English meaning of the word.
 
